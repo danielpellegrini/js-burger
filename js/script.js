@@ -9,20 +9,33 @@
 // Controllate anche la mia repo su boolean-code, dal live coding di oggi, ci sarà sicuramente qualcosa che potrà esservi utile :)
 // Quindi poi lavorate su un html bruttissimo e un bel po' di js che vi permetta almeno di calcolare il totale.
 
-var costs = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input'); //selecting the whole checkboxes
-var total = 50; // initial value
-var totalHtmlElement = document.getElementById('total-div'); // it'll print the value in html
+var check = document.getElementsByClassName('ingredient-container')[0].getElementsByTagName('input'); //selecting the whole checkboxes
+var total = 50; //initial value
+var totalHtmlElement = document.getElementById('total-div'); //it'll print the value in html
+var couponList = ['1Q2W3E4R5T6Y', '0P9O8I7U6Y5T', '1A2S3D4F5G6H', '0L9K8J7H6G5F']; //Array with the coupons list
+var discountCoupon = document.getElementsByClassName('discount-coupon')[0]; // getting the coupon from the user
+var burgerName = document.getElementsByClassName('burger-name')[0]; // getting the burger name
+var buttonIngredient = document.getElementsByTagName('button')[0];
+var chosenIngredients = 0;
 
-// adding click event
-document.getElementById('button-ingredient').addEventListener("click", function() {
 
-  total = 50; //reset to the initial value every time you'll click the button
 
-  for (var i = 0; i < costs.length; i++) {
-    if (costs[i].checked) { //adding price from 'costs' to 'total' every time 'costs' is checked
-      total += parseInt(costs[i].value);
+buttonIngredient.addEventListener('click', function() { //adding click event
+
+  total = 50; //reset to the initial value every time the guest will click the button
+
+  if (burgerName.value === '') { //the user must insert a name for his/her burger
+    alert('You should insert a name first! Try again please') // otherwise it's not possible to go ahead
+  } else { //burger named, the user can proceed
+
+  for (var i = 0; i < check.length; i++) {
+    if (check[i].checked) { //adding price from 'costs' to 'total' every time 'costs' is checked
+      total += parseInt(check[i].value);
     }
   }
+}
+
+
 
   totalHtmlElement.getElementsByTagName('span')[1].innerText = total; // printing the value
 

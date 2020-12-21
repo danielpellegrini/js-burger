@@ -9,28 +9,63 @@
 
 <body>
 
-  <header>
+  <div class="main-container">
+    <div class="main-content">
 
-  </header>
 
-  <section>
-    <div class='ingredient-container'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
-      <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>
+
+      <header>
+        <h1>create your hamburger</h1>
+      </header>
+
+      <div class="hamburger-name">
+        <form>
+          <input class="burger-name" type="text" placeholder="name your burger">
+        </form>
+      </div>
+
+      <main>
+        <span>Ingredients</span>
+        <form class='ingredient-container'>
+          <label>Cheese</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+
+          <label>Egg</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+
+          <label>Mustard</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+
+          <label>Tomato</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+
+          <label>Lettuce</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+
+          <label>Ketchup</label>
+          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+        </form>
+      </main>
+
+      <section id="coupon-section">
+        <form>
+          <label>discount coupon</label>
+          <input class="discount-coupon" type="text"  placeholder="12345ABCDEF">
+
+        </form>
+      </section>
+
+      <section id="button-section">
+        <button id='button-ingredient' type="button" name="button">Calculate</button>
+      </section>
+
+
+      <footer>
+        <div id="total-div">your price:<span> $</span><span>50</span></div>
+      </footer>
+
     </div>
-
-    <button id='button-ingredient' type="button" name="button">Calculate</button>
-
-  </section>
-
-  <footer>
-    <div id="total-div">Your Price:<span> $</span><span>50</span></div>
-  </footer>
-
+  </div>
   <!-- JavaScript -->
   <script src="js/script.js" charset="utf-8"></script>
 </body>
