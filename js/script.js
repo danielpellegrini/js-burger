@@ -14,14 +14,16 @@ var total = 50; // initial value
 var totalHtmlElement = document.getElementById('total-div'); // it'll print the value in html
 
 // adding click event
-document.getElementById('button-ingredient').addEventListener("click", function function() {
+document.getElementById('button-ingredient').addEventListener("click", function() {
 
   total = 50; //reset to the initial value every time you'll click the button
 
   for (var i = 0; i < costs.length; i++) {
     if (costs[i].checked) { //adding price from 'costs' to 'total' every time 'costs' is checked
-      total += parseInt(costs[x].value);
+      total += parseInt(costs[i].value);
     }
   }
+
+  totalHtmlElement.getElementsByTagName('span')[1].innerText = total; // printing the value
 
 })
