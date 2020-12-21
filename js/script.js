@@ -19,21 +19,30 @@ var buttonIngredient = document.getElementsByTagName('button')[0];
 var chosenIngredients = 0;
 
 
-
 buttonIngredient.addEventListener('click', function() { //adding click event
 
   total = 50; //reset to the initial value every time the guest will click the button
+  chosenIngredients = 0; //reset to the initial value every time the guest will click the button
 
   if (burgerName.value === '') { //the user must insert a name for his/her burger
     alert('You should insert a name first! Try again please') // otherwise it's not possible to go ahead
   } else { //burger named, the user can proceed
+    for (var i = 0; i < check.length; i++) {
+      if (check[i].checked) { //adding ingredients in 'chosenIngredients'
+        chosenIngredients += 1;
+      }
+    }
 
-  for (var i = 0; i < check.length; i++) {
-    if (check[i].checked) { //adding price from 'costs' to 'total' every time 'costs' is checked
-      total += parseInt(check[i].value);
+    if (chosenIngredients < 2) {
+      alert('Your burger is empty! Why not select at least 2 ingredients?')
+    } else {
+      for (var i = 0; i < check.length; i++) {
+        if (check[i].checked) { //adding price from 'check' to 'total' every time at least 2 ingredients are checked
+          total += parseInt(check[i].value);
+        }
+      }
     }
   }
-}
 
 
 
