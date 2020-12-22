@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
   <title>Create Your Burger</title>
 </head>
 
@@ -12,13 +14,11 @@
   <div class="main-container">
     <div class="main-content">
 
-
-
-      <header>
-        <h1>create your hamburger</h1>
+      <header id="head">
+        <h1>create your burger</h1>
       </header>
 
-      <div class="hamburger-name">
+      <div id="burger-container">
         <form>
           <input class="burger-name" type="text" placeholder="name your burger">
         </form>
@@ -26,31 +26,38 @@
 
       <main>
         <span>Ingredients</span>
-        <form class='ingredient-container'>
-          <label>Cheese</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+        <div class='ingredient-container'>
 
-          <label>Egg</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+          <form id="first-group" action="index.html" method="post">
 
-          <label>Mustard</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+            <label for="cheese">Cheese</label>
+            <input type="checkbox" id="cheese" name="list[]" value='10'><span> add</span>
 
-          <label>Tomato</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+            <label for="egg">Egg</label>
+            <input type="checkbox" id="egg" name="list[]" value='10'><span> add</span>
 
-          <label>Lettuce</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
+            <label for="mustard">Mustard</label>
+            <input type="checkbox" id="mustard" name="list[]" value='10'><span> add</span>
+          </form>
 
-          <label>Ketchup</label>
-          <input type="checkbox" class="ingredient-checkbox" name="list[]" value='10'>add
-        </form>
+          <form id="second-group" action="index.html" method="post">
+
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" id="tomato" name="list[]" value='10'><span> add</span>
+
+            <label for="lettuce">Lettuce</label>
+            <input type="checkbox" id="lettuce" name="list[]" value='10'><span> add</span>
+
+            <label for="ketchup">Ketchup</label>
+            <input type="checkbox" id="ketchup" name="list[]" value='10'><span> add</span>
+          </form>
+        </div>
       </main>
 
       <section id="coupon-section">
         <form>
           <label>discount coupon</label>
-          <input class="discount-coupon" type="text"  placeholder="12345ABCDEF">
+          <input class="discount-coupon" type="text" placeholder="12345ABCDEF">
 
         </form>
       </section>
@@ -61,11 +68,13 @@
 
 
       <footer>
-        <div id="total-div">your price:<span> $</span><span>50</span></div>
+        <div id="total-div">your price:<span><b>$ </b>50</span></div>
       </footer>
 
     </div>
+    <!-- end main content -->
   </div>
+  <!-- end main container -->
 
   <!-- JavaScript -->
   <script src="js/script.js" charset="utf-8"></script>

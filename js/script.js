@@ -2,8 +2,8 @@
 // L'utente con questa applicazione web potrà creare il suo hamburger e conoscere il prezzo del suo ordine.
 // - assegnerà obbligatoriamente un nome al suo hamburger. |V|
 // - deve selezionare almeno due ingredienti. |V|
-// - se inserisce un codice coupon tra quelli che già abbiamo in lista, applichiamo uno sconto del 20% sul totale.
-// - tutto ciò viene "generato", quindi calcolato (prezzo e/o sconto), al click sul pulsante.
+// - se inserisce un codice coupon tra quelli che già abbiamo in lista, applichiamo uno sconto del 20% sul totale. |V|
+// - tutto ciò viene "generato", quindi calcolato (prezzo e/o sconto), al click sul pulsante. |V|
 // - il testo dove inserire il nome dell'hamburger è un input, di quelli che abbiamo visto in classe, customizzato a nostro piacimento ;)
 // Proseguite per step, piano piano, trovate il primo muro, i primi ostacoli commentandoli all'inizio del vostro codice. Cercate tutta la documentazione che vi possa servire per quell'obiettivo.
 // Controllate anche la mia repo su boolean-code, dal live coding di oggi, ci sarà sicuramente qualcosa che potrà esservi utile :)
@@ -45,13 +45,13 @@ buttonIngredient.addEventListener('click', function() { //adding click event
       for (var x = 0; x < couponList.length; x++) {
         if (getCoupon.value === couponList[x]) { //getting coupon
           allowed = true;
-          console.log('true');
+          console.log('discount applied to guest');
         }
       }
       if (allowed) { // if it is in the list, the user get 20% discount
-        startPrice= (startPrice - (startPrice * 20) / 100)
+        startPrice = (startPrice - (startPrice * 20) / 100)
       }
-      finalPrice.getElementsByTagName('span')[1].innerText = startPrice; // printing the final value
+      finalPrice.getElementsByTagName('span')[0].innerText = '$ ' + startPrice; // printing the final value
     }
   }
 
