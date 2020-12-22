@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
   <title>Create Your Burger</title>
 </head>
 
@@ -24,33 +24,55 @@
         </form>
       </div>
 
-      <main>
+      <main class="pad">
         <span>Ingredients</span>
         <div class='ingredient-container'>
 
+          <!-- first group of ingredients -->
           <form id="first-group" action="index.html" method="post">
-
-            <label for="cheese">Cheese</label>
-            <input type="checkbox" id="cheese" name="list[]" value='10'><span> add</span>
-
-            <label for="egg">Egg</label>
-            <input type="checkbox" id="egg" name="list[]" value='10'><span> add</span>
-
-            <label for="mustard">Mustard</label>
-            <input type="checkbox" id="mustard" name="list[]" value='10'><span> add</span>
+            <div>
+              <img src="img/cheese.svg" alt="cheese">
+              <label for="cheese">Cheese
+                <input type="checkbox" id="cheese" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
+            <div>
+              <img src="img/fried-egg.svg" alt="fried-egg">
+              <label for="egg">Egg
+                <input type="checkbox" id="egg" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
+            <div>
+              <img src="img/mustard.svg" alt="mustard">
+              <label for="mustard">Mustard
+                <input type="checkbox" id="mustard" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
           </form>
+          <!-- end first group of ingredients -->
 
+          <!-- second group of ingredients -->
           <form id="second-group" action="index.html" method="post">
-
-            <label for="tomato">Tomato</label>
-            <input type="checkbox" id="tomato" name="list[]" value='10'><span> add</span>
-
-            <label for="lettuce">Lettuce</label>
-            <input type="checkbox" id="lettuce" name="list[]" value='10'><span> add</span>
-
-            <label for="ketchup">Ketchup</label>
-            <input type="checkbox" id="ketchup" name="list[]" value='10'><span> add</span>
+            <div>
+              <img src="img/tomato.svg" alt="tomato">
+              <label for="tomato">Tomato
+                <input type="checkbox" id="tomato" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
+            <div>
+              <img src="img/lettuce.svg" alt="lettuce">
+              <label for="lettuce">Lettuce
+                <input type="checkbox" id="lettuce" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
+            <div>
+              <img src="img/ketchup.svg" alt="ketchup">
+              <label for="ketchup">Ketchup
+                <input type="checkbox" id="ketchup" name="list[]" value='10'><span> add</span>
+              </label>
+            </div>
           </form>
+          <!-- end second group of ingredients -->
         </div>
       </main>
 
@@ -58,7 +80,6 @@
         <form>
           <label>discount coupon</label>
           <input class="discount-coupon" type="text" placeholder="12345ABCDEF">
-
         </form>
       </section>
 
@@ -67,7 +88,7 @@
       </section>
 
 
-      <footer>
+      <footer class="pad">
         <div id="total-div">your price:<span><b>$ </b>50</span></div>
       </footer>
 

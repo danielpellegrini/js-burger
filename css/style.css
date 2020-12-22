@@ -3,8 +3,11 @@
   margin: 0;
   padding: 0;
   text-transform: capitalize;
-  /* font-size: 1.1em; */
   font-family: "Noto Sans JP", sans-serif;
+}
+
+.pad {
+  padding: 0 30px;
 }
 
 .main-container {
@@ -36,15 +39,26 @@ main {
 
 .ingredient-container {
   display: flex;
-}
-
-#first-group span, #second-group span {
-  font-size: 0.5em;
-  color: red;
-}
-
-form {
+  justify-content: space-between;
+  flex-wrap: wrap;
   line-height: 1.8;
+}
+
+img {
+  max-width: 50px;
+  vertical-align: middle;
+}
+
+#first-group,
+#second-group {
+  width: 200px;
+  /* height: auto; */
+
+}
+
+#first-group span,
+#second-group span {
+  color: red;
 }
 
 footer {
@@ -52,7 +66,6 @@ footer {
   line-height: 80px;
   background-color: #D33359;
   color: #FFFFFF;
-  padding: 0 30px;
   font-size: 1.5em;
 }
 
