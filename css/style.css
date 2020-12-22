@@ -58,11 +58,16 @@ main {
   width: 100%;
 }
 
+.ingredients-title {
+  padding: 20px 0;
+  font-size: 1.4em;
+}
+
 .ingredient-container {
   display: flex;
   justify-content: space-between;
   /* flex-wrap: nowrap; */
-  line-height: 4;
+  /* line-height: 2; */
 }
 
 .ingredient-container img {
@@ -101,17 +106,17 @@ main {
 /* custom checkbox */
 
 .ingredient {
-  height: 56px;
+  height: 50px;
   margin-bottom: 16px;
-  line-height: 56px;
+  line-height: 50px;
 }
 
 .ingredient .checkbox {
   display: inline-block;
   width: 170px;
-  height: 56px;
+  height: 50px;
   vertical-align: middle;
-  line-height: 56px;
+  line-height: 50px;
 }
 
 .ingredient .checkbox span {
