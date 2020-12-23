@@ -51,6 +51,7 @@ buttonIngredient.addEventListener('click', function() { //adding click event
       if (allowed) { // if it is in the list, the user get 20% discount
         startPrice = (startPrice - (startPrice * 20) / 100)
       }
+      startPrice = startPrice.toFixed(2); //adding decimal
       finalPrice.getElementsByTagName('span')[0].innerText = '$ ' + startPrice; // printing the final value
     }
   }
