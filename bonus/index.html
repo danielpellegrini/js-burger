@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <title>Create Your Burger</title>
+</head>
+
+<body>
+
+  <div class="main-container">
+    <div class="main-content">
+
+      <header id="head">
+        <h1 class="pad">create your burger</h1>
+        <div><img src="img/burger-top.png" alt="burger"></div>
+      </header>
+
+      <!-- burger name input -->
+      <div id="burger-container" class="pad">
+        <form>
+          <input id="nameChooser" class="burger-name shaking shaking-off" type="text" placeholder="name your burger">
+        </form>
+      </div>
+      <!-- end burger name input -->
+
+      <main class="pad">
+        <div class="ingredients-title">
+          <span>Ingredients</span>
+        </div>
+        <div class='ingredient-container'>
+
+          <!-- first group of ingredients -->
+          <form id="first-group" action="index.html" method="post">
+
+            <div class="ingredient">
+              <img src="img/cheese.svg" alt="cheese">
+              <label class="checkbox" for="cheese">Cheese
+                <input type="checkbox" class="ingredient-checkbox" id="cheese" name="list[]" value='10'>
+                <span class="ingredient-add"> add</span>
+              </label>
+            </div>
+
+            <div class="ingredient">
+              <img src="img/fried-egg.svg" alt="fried-egg">
+              <label class="checkbox" for="egg">Egg
+                <input type="checkbox" class="ingredient-checkbox" id="egg" name="list[]" value='10'>
+                <span class="ingredient-add"> add</span>
+              </label>
+            </div>
+
+            <div class="ingredient">
+              <img src="img/mustard.svg" alt="mustard">
+              <label class="checkbox" for="mustard">Mustard
+                <input type="checkbox" class="ingredient-checkbox" id="mustard" name="list[]" value='10'>
+                <span class="ingredient-add"> add</span>
+              </label>
+            </div>
+          </form>
+          <!-- end first group of ingredients -->
+
+          <!-- second group of ingredients -->
+          <form id="second-group" action="index.html" method="post">
+            <div class="ingredient">
+              <img src="img/tomato.svg" alt="tomato">
+              <label class="checkbox" for="tomato">Tomato
+                <input type="checkbox" class="ingredient-checkbox" id="tomato" name="list[]" value='10'>
+                <span> add</span>
+              </label>
+            </div>
+            <div class="ingredient">
+              <img src="img/lettuce.svg" alt="lettuce">
+              <label class="checkbox" for="lettuce">Lettuce
+                <input type="checkbox" class="ingredient-checkbox" id="lettuce" name="list[]" value='10'>
+                <span> add</span>
+              </label>
+            </div>
+            <div class="ingredient">
+              <img src="img/ketchup.svg" alt="ketchup">
+              <label class="checkbox" for="ketchup">Ketchup
+                <input type="checkbox" class="ingredient-checkbox" id="ketchup" name="list[]" value='10'>
+                <span> add</span>
+              </label>
+            </div>
+          </form>
+          <!-- end second group of ingredients -->
+        </div>
+      </main>
+
+      <!-- coupon -->
+      <section id="coupon-section">
+        <form class="pad">
+          <label>discount coupon</label>
+          <input class="discount-coupon" type="text" placeholder="12345ABCDEF">
+        </form>
+      </section>
+      <!-- end coupon -->
+
+      <!-- calculate button -->
+      <div class="button-container">
+        <section id="button-section">
+          <button id='button-ingredient' type="button" name="button">Calculate</button>
+        </section>
+      </div>
+      <!-- end calculate button -->
+
+
+      <footer class="pad">
+        <div id="total-div">your price<span><b>$ </b>50.00</span></div>
+      </footer>
+
+    </div>
+    <!-- end main content -->
+  </div>
+  <!-- end main container -->
+
+  <!-- JavaScript -->
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
